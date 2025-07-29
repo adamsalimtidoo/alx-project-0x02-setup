@@ -1,17 +1,13 @@
 "use client";
 
 import React from "react";
-import { cn } from "@/lib/utils";
+import { CardProps } from "@/interfaces";
 
-type CardProps = {
-  children: React.ReactNode;
-  className?: string;
-};
-
-const Card: React.FC<CardProps> = ({ children, className }) => {
+const Card: React.FC<CardProps> = ({ title, content }) => {
   return (
-    <div className={cn("bg-white rounded-2xl shadow-md p-4", className)}>
-      {children}
+    <div className="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition">
+      <h2 className="text-xl font-semibold text-blue-700 mb-2">{title}</h2>
+      <p className="text-gray-700">{content}</p>
     </div>
   );
 };
