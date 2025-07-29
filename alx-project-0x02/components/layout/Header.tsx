@@ -6,8 +6,9 @@ const Header: React.FC = () => {
     <header className="bg-white shadow-md px-6 py-4 flex items-center justify-between">
       {/* Navigation */}
       <nav className="hidden md:flex gap-6 text-gray-700 font-medium">
-        <link href="/home" className="hover:text-white-500">Home</link>
-        <link href="/about" className="hover:text-white-500">About</link>
+        <Link href="/home" className="hover:text-white-500">Home</Link>
+        <Link href="/about" className="hover:text-white-500">About</Link>
+        <h1>Hallo</h1>
       </nav>
     </header>
   );
