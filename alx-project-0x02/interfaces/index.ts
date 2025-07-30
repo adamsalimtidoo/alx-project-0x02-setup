@@ -17,3 +17,9 @@ export interface PostModalProps {
   onClose: () => void;
   onSubmit: (post: { title: string; content: string }) => void;
 }
+
+export interface UsersProps {
+  name: string;
+  email:string;
+  address:string;
+}
