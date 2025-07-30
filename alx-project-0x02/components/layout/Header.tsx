@@ -13,6 +13,6 @@ const Header: React.FC = () => {
     </header>
   );
 };
-//["posts"]
+//["/posts"]
 
 export default Header;
