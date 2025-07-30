@@ -3,6 +3,7 @@ import Card from "@/components/common/Card";
 import Link from "next/link";
 import PostModal from "@/components/common/PostModal";
 import { PostModalProps } from "@/interfaces";
+import Header from "@/components/layout/Header";
 
 
 const HomePage: React.FC = () => {
