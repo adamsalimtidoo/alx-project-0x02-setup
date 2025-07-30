@@ -1,6 +1,8 @@
 import React from "react";
 import Card from "@/components/common/Card";
 import Link from "next/link";
+import PostModal from "@/components/common/PostModal";
+import { PostModalProps } from "@/interfaces";
 
 
 const HomePage: React.FC = () => {
@@ -21,6 +23,45 @@ const HomePage: React.FC = () => {
     </main>
   );
 };
+//implement Postmodal for user input
+const Post: React.FC <PostModalProps> = () => {
+  const [isModalOpen, setModalOpen] = useState(false);
+  const [posts, setPosts] = useState<Post[]>([]);
+
+  const handleAddPost = (title: string, content: string) => {
+    const newPost = { title, content };
+    setPosts((prev) => [newPost, ...prev]);
+}};
+
+  return (
+    <div className="p-8 space-y-6">
+      <button
+        onClick={() => setModalOpen(true)}
+        className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700"
+      >
+        Add New Post
+      </button>
+
+      {/* Render cards */}
+      /*
+      {posts.length === 0 ? (
+        <p className="text-gray-600">No posts yet. Click the button above to add one.</p>
+      ) : (
+        posts.map((post, index) => (
+          <Card key={index} title={post.title} content={post.content} />
+        ))
+      )}
+
+      {/* Modal */}
+      /*
+      <PostModal
+        isOpen={isModalOpen}
+        onClose={() => setModalOpen(false)}
+        onSubmit={handleAddPost}
+      />
+   </div>*
+    
+  );
 
 
 export default HomePage;

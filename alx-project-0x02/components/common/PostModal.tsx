@@ -1,12 +1,6 @@
-"use client";
-
 import React, { useState } from "react";
+import { PostModalProps } from "@/interfaces";
 
-interface PostModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-  onSubmit: (post: { title: string; content: string }) => void;
-}
 
 const PostModal: React.FC<PostModalProps> = ({ isOpen, onClose, onSubmit }) => {
   const [title, setTitle] = useState("");
